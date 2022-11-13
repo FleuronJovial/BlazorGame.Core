@@ -1,4 +1,4 @@
-﻿namespace BlazorGame.Core.Assets
+﻿namespace BlazorGame.Core.Enums
 {
     public enum ImageFormat
     {

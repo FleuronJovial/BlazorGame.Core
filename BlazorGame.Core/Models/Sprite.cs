@@ -2,7 +2,7 @@ using System;
 using System.Drawing;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorGame.Core.Assets
+namespace BlazorGame.Core.Models
 {
     public class Sprite : SpriteBase
     {
@@ -10,10 +10,10 @@ namespace BlazorGame.Core.Assets
         {
             if (string.IsNullOrWhiteSpace(imagePath))
                 throw new ArgumentNullException(nameof(imagePath));
-            this.ImagePath = imagePath;
+            ImagePath = imagePath;
         }
 
         public string ImagePath { get; }
-       
+
     }
 }

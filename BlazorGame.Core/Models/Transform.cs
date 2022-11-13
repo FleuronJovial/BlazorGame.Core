@@ -1,6 +1,6 @@
 ﻿using System.Numerics;
 
-namespace BlazorGame.Core
+namespace BlazorGame.Core.Models
 {
     public class Transform
     {
@@ -17,9 +17,9 @@ namespace BlazorGame.Core
 
         public void Clone(Transform source)
         {
-            this.Position = source.Position;
-            this.Scale = source.Scale;
-            this.Rotation = source.Rotation;
+            Position = source.Position;
+            Scale = source.Scale;
+            Rotation = source.Rotation;
         }
 
         public void Reset()

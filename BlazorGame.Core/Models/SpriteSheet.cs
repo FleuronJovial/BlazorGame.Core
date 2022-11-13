@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using BlazorGame.Core.Interfaces;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorGame.Core.Assets
+namespace BlazorGame.Core.Models
 {
     public class SpriteSheet : IAsset
     {
         private readonly Dictionary<string, SpriteBase> _sprites = new();
-        
+
         public SpriteSheet(string name, ElementReference elementRef, string imagePath, SpriteBase[] sprites)
         {
             if (string.IsNullOrWhiteSpace(name))
@@ -18,13 +19,13 @@ namespace BlazorGame.Core.Assets
 
             if (sprites is null || !sprites.Any())
                 throw new ArgumentNullException(nameof(sprites));
-            
-            this.Name = name;
-            this.ImagePath = imagePath;
 
-            this.ElementRef = elementRef;
-            
-            foreach(var sprite in sprites)
+            Name = name;
+            ImagePath = imagePath;
+
+            ElementRef = elementRef;
+
+            foreach (var sprite in sprites)
                 _sprites.Add(sprite.Name, sprite);
         }
 
@@ -50,5 +51,5 @@ namespace BlazorGame.Core.Assets
             return sprite;
         }
     }
-    
+
 }

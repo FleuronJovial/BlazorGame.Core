@@ -1,7 +1,8 @@
 using System.Drawing;
+using BlazorGame.Core.Interfaces;
 using Microsoft.AspNetCore.Components;
 
-namespace BlazorGame.Core.Assets
+namespace BlazorGame.Core.Models
 {
     public class SpriteBase : IAsset
     {

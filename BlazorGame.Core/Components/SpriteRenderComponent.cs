@@ -1,5 +1,6 @@
 ﻿using Blazor.Extensions.Canvas.Canvas2D;
-using BlazorGame.Core.Assets;
+using BlazorGame.Core.Interfaces;
+using BlazorGame.Core.Models;
 
 namespace BlazorGame.Core.Components
 {
@@ -14,7 +15,7 @@ namespace BlazorGame.Core.Components
 
         public async ValueTask Render(GameContext game, Canvas2DContext context)
         {
-            if (!this.Owner.Enabled)
+            if (!Owner.Enabled)
                 return;
 
             await context.SaveAsync();

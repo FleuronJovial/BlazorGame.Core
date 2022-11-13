@@ -1,6 +1,6 @@
 using System.Threading.Tasks;
 
-namespace BlazorGame.Core.Assets.Loaders
+namespace BlazorGame.Core.Interfaces
 {
     public interface IAssetLoader<TA> where TA : IAsset
     {

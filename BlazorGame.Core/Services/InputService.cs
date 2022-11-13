@@ -1,9 +1,9 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using BlazorGame.Core.Enums;
+using BlazorGame.Core.Interfaces;
+using BlazorGame.Core.Models;
 using BlazorGame.Core.Utils;
 
-namespace BlazorGame.Core
+namespace BlazorGame.Core.Services
 {
     public class InputService : IGameService
     {
@@ -18,7 +18,7 @@ namespace BlazorGame.Core
             _keyboardStates = EnumUtils.GetAllValues<Keys>()
                                        .ToDictionary(v => v, v => ButtonState.None);
         }
-        
+
         public void SetButtonState(MouseButtons button, ButtonState.States state)
         {
             var oldState = _buttonStates[button];
@@ -34,45 +34,13 @@ namespace BlazorGame.Core
         }
 
         public ButtonState GetKeyState(Keys key) => _keyboardStates[key];
-        
+
         public ValueTask Step() => ValueTask.CompletedTask;
     }
 
-    public enum MouseButtons
-    {
-        Left = 0,
-        Middle = 1,
-        Right = 2
-    }
 
-    public struct ButtonState
-    {
-        public ButtonState(States state, bool wasPressed)
-        {
-            State = state;
-            WasPressed = wasPressed;
-        }
 
-        public bool WasPressed { get; }
-        public States State { get; }
 
-        public enum States
-        {
-            Up = 0,
-            Down = 1
-        }
 
-        public static readonly ButtonState None = new ButtonState(States.Up, false);
-    }
 
-    public enum Keys
-    {
-        Up = 38,
-        Left = 37,
-        Down = 40,
-        Right = 39,
-        Space = 32,
-        LeftCtrl = 17,
-        LeftAlt = 18,
-    }
 }

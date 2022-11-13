@@ -4,6 +4,8 @@ using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
+using BlazorGame.Core.Interfaces;
+using BlazorGame.Core.Models;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorGame.Core.Assets.Loaders

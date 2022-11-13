@@ -1,4 +1,6 @@
 ﻿using BlazorGame.Core.Exceptions;
+using BlazorGame.Core.Interfaces;
+using BlazorGame.Core.Models;
 using System.Collections;
 
 namespace BlazorGame.Core.Components

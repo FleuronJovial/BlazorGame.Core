@@ -1,4 +1,4 @@
-namespace BlazorGame.Core.Assets
+namespace BlazorGame.Core.Interfaces
 {
     public interface IAsset
     {

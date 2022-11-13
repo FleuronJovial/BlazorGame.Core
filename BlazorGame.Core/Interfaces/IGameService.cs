@@ -1,4 +1,4 @@
-﻿namespace BlazorGame.Core
+﻿namespace BlazorGame.Core.Interfaces
 {
     public interface IGameService
     {

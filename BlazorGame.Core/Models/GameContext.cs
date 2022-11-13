@@ -1,4 +1,6 @@
-namespace BlazorGame.Core
+using BlazorGame.Core.Interfaces;
+
+namespace BlazorGame.Core.Models
 {
     public abstract class GameContext
     {

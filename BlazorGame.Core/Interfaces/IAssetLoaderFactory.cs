@@ -1,4 +1,4 @@
-namespace BlazorGame.Core.Assets.Loaders
+namespace BlazorGame.Core.Interfaces
 {
     public interface IAssetLoaderFactory
     {

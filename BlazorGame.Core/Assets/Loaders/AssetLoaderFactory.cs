@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using BlazorGame.Core.Interfaces;
 
 namespace BlazorGame.Core.Assets.Loaders
 {

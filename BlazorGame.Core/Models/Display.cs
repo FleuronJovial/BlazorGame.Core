@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace BlazorGame.Core
+namespace BlazorGame.Core.Models
 {
     public class Display
     {

@@ -1,7 +1,9 @@
 using System.Threading.Tasks;
 using Blazor.Extensions.Canvas.Canvas2D;
+using BlazorGame.Core.Interfaces;
+using BlazorGame.Core.Models;
 
-namespace BlazorGame.Core
+namespace BlazorGame.Core.Services
 {
     public class RenderService : IGameService
     {
@@ -17,7 +19,7 @@ namespace BlazorGame.Core
         public async ValueTask Step()
         {
             var sceneGraph = _game.GetService<SceneGraph>();
-            
+
             await _context.ClearRectAsync(0, 0, _game.Display.Size.Width, _game.Display.Size.Height);
 
             await _context.BeginBatchAsync();

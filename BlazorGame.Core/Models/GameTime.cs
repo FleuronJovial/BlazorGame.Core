@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 
-namespace BlazorGame.Core
+namespace BlazorGame.Core.Models
 {
     public class GameTime
     {

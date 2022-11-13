@@ -1,10 +1,13 @@
+using BlazorGame.Core.Interfaces;
+using BlazorGame.Core.Models;
+
 namespace BlazorGame.Core.Components
 {
     public abstract class BaseComponent : IComponent
     {
         protected BaseComponent(GameObject owner)
         {
-            this.Owner = owner ?? throw new ArgumentNullException(nameof(owner));
+            Owner = owner ?? throw new ArgumentNullException(nameof(owner));
         }
         
         //TODO: add an OnStart method

@@ -1,4 +1,6 @@
 using Blazor.Extensions.Canvas.Canvas2D;
+using BlazorGame.Core.Interfaces;
+using BlazorGame.Core.Models;
 using System.Drawing;
 
 namespace BlazorGame.Core.Components
@@ -54,7 +56,7 @@ namespace BlazorGame.Core.Components
         public event OnPositionChangedHandler OnPositionChanged;
         public delegate void OnPositionChangedHandler(BoundingBoxComponent sender);
 
-        public void CollideWith(BoundingBoxComponent other) => this.OnCollision?.Invoke(this, other);
+        public void CollideWith(BoundingBoxComponent other) => OnCollision?.Invoke(this, other);
 
         public event OnCollisionHandler OnCollision;
         public delegate void OnCollisionHandler(BoundingBoxComponent sender, BoundingBoxComponent collidedWith);

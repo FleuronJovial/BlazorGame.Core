@@ -1,4 +1,4 @@
-﻿using BlazorGame.Core.Components;
+﻿using BlazorGame.Core.Interfaces;
 
 namespace BlazorGame.Core.Exceptions
 {
