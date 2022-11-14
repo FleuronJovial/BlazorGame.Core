@@ -15,7 +15,7 @@ namespace BlazorGame.Core.Components
 
         public async ValueTask Render(GameContext game, Canvas2DContext context)
         {
-            if (!Owner.Enabled)
+            if (Sprite == null || !Owner.Enabled)
                 return;
 
             await context.SaveAsync();
@@ -33,6 +33,6 @@ namespace BlazorGame.Core.Components
             await context.RestoreAsync();
         }
 
-        public SpriteBase Sprite { get; set; }
+        public SpriteBase? Sprite { get; set; }
     }
 }

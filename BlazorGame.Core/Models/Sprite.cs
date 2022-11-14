@@ -1,6 +1,5 @@
-using System;
-using System.Drawing;
 using Microsoft.AspNetCore.Components;
+using System.Drawing;
 
 namespace BlazorGame.Core.Models
 {

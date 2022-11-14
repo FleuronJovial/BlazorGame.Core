@@ -1,12 +1,8 @@
-﻿using System;
-using System.Drawing;
-using System.Linq;
-using System.Net.Http;
-using System.Net.Http.Json;
-using System.Threading.Tasks;
-using BlazorGame.Core.Interfaces;
+﻿using BlazorGame.Core.Interfaces;
 using BlazorGame.Core.Models;
 using Microsoft.AspNetCore.Components;
+using System.Drawing;
+using System.Net.Http.Json;
 
 namespace BlazorGame.Core.Assets.Loaders
 {
@@ -22,7 +18,7 @@ namespace BlazorGame.Core.Assets.Loaders
         public async ValueTask<SpriteSheet> Load(string path)
         {
             var dto = await _httpClient.GetFromJsonAsync<SpriteSheetDTO>(path);
-            
+
             var elementRef = new ElementReference(Guid.NewGuid().ToString());
 
             var sprites = dto.sprites

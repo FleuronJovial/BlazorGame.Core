@@ -7,7 +7,7 @@ namespace BlazorGame.Core.Components
 {
     public class BoundingBoxComponent : BaseComponent, IRenderable
     {
-        private readonly TransformComponent _transform; 
+        private readonly TransformComponent _transform;
         private Rectangle _bounds;
         private Size _halfSize;
 
@@ -26,14 +26,14 @@ namespace BlazorGame.Core.Components
 
         public override async ValueTask Update(GameContext game)
         {
-            var x = (int) _transform.World.Position.X - _halfSize.Width;
-            var y = (int) _transform.World.Position.Y - _halfSize.Height;
+            var x = (int)_transform.World.Position.X - _halfSize.Width;
+            var y = (int)_transform.World.Position.Y - _halfSize.Height;
 
             var changed = _bounds.X != x || _bounds.Y != y;
             _bounds.X = x;
             _bounds.Y = y;
-            
-            if(changed)
+
+            if (changed)
                 OnPositionChanged?.Invoke(this);
         }
 
@@ -48,7 +48,7 @@ namespace BlazorGame.Core.Components
             await context.StrokeRectAsync(_bounds.X, _bounds.Y,
                 _bounds.Width,
                 _bounds.Height);
-            
+
             await context.SetStrokeStyleAsync(tmpS);
             await context.SetLineWidthAsync(tmpW);
         }

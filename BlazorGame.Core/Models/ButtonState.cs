@@ -17,6 +17,6 @@
             Down = 1
         }
 
-        public static readonly ButtonState None = new ButtonState(States.Up, false);
+        public static readonly ButtonState None = new(States.Up, false);
     }
 }

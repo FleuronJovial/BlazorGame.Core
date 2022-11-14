@@ -1,5 +1,3 @@
-using System.Threading.Tasks;
-
 namespace BlazorGame.Core.Interfaces
 {
     public interface IAssetsResolver

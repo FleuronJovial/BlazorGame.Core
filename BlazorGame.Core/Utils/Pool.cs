@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace BlazorGame.Core.Utils
+﻿namespace BlazorGame.Core.Utils
 {
     public class Pool<T>
     {
         private readonly Func<T> _factory;
         private readonly Queue<T> _items = new();
-        
+
         public Pool(Func<T> factory)
         {
             _factory = factory ?? throw new ArgumentNullException(nameof(factory));
@@ -21,7 +17,7 @@ namespace BlazorGame.Core.Utils
 
         public void Return(T item)
         {
-            if (item == null) 
+            if (item == null)
                 throw new ArgumentNullException(nameof(item));
             _items.Enqueue(item);
         }

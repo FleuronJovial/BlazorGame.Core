@@ -1,7 +1,5 @@
-using System;
-using System.Collections.Concurrent;
-using System.Threading.Tasks;
 using BlazorGame.Core.Interfaces;
+using System.Collections.Concurrent;
 
 namespace BlazorGame.Core.Assets
 {
@@ -22,8 +20,8 @@ namespace BlazorGame.Core.Assets
             var asset = await loader.Load(path);
 
             if (null == asset)
-                throw new TypeLoadException($"unable to load asset type '{typeof(TA)}' from path '{path}'"); 
-            
+                throw new TypeLoadException($"unable to load asset type '{typeof(TA)}' from path '{path}'");
+
             _assets.AddOrUpdate(path, k => asset, (k, v) => asset);
             return asset;
         }

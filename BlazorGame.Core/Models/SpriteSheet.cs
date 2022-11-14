@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using BlazorGame.Core.Interfaces;
+﻿using BlazorGame.Core.Interfaces;
 using Microsoft.AspNetCore.Components;
 
 namespace BlazorGame.Core.Models

@@ -1,4 +1,3 @@
-using System;
 using System.Numerics;
 
 namespace BlazorGame.Core.Utils
@@ -34,7 +33,7 @@ namespace BlazorGame.Core.Utils
             var radians = degrees * MathUtils.Deg2Rad;
             var sin = MathF.Sin(radians);
             var cos = MathF.Cos(radians);
-            
+
             var tx = v.X;
             var ty = v.Y;
 

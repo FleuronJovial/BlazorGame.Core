@@ -9,7 +9,7 @@ namespace BlazorGame.Core.Components
         {
             Owner = owner ?? throw new ArgumentNullException(nameof(owner));
         }
-        
+
         //TODO: add an OnStart method
 
         public virtual async ValueTask Update(GameContext game)

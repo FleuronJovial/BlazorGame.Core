@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using BlazorGame.Core.Interfaces;
 
 namespace BlazorGame.Core.Assets.Loaders
@@ -23,7 +21,7 @@ namespace BlazorGame.Core.Assets.Loaders
         public IAssetLoader<TA> Get<TA>() where TA : IAsset
         {
             var type = typeof(TA);
-            if(!_loaders.ContainsKey(type))
+            if (!_loaders.ContainsKey(type))
                 throw new ArgumentOutOfRangeException($"invalid asset type: {type.FullName}");
 
             return _loaders[type] as IAssetLoader<TA>;

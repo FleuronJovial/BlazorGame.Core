@@ -1,5 +1,3 @@
-using System;
-
 namespace BlazorGame.Core.Utils
 {
     public static class RandomExtensions

@@ -4,7 +4,7 @@ namespace BlazorGame.Core.Models
 {
     public class GameTime
     {
-        private readonly Stopwatch _stopwatch = new Stopwatch();
+        private readonly Stopwatch _stopwatch = new();
 
         private long _lastTick = 0;
         private long _elapsedTicks = 0;

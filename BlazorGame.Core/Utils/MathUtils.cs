@@ -1,5 +1,3 @@
-using System;
-
 namespace BlazorGame.Core.Utils
 {
     public static class MathUtils
@@ -7,7 +5,7 @@ namespace BlazorGame.Core.Utils
         public readonly static Random Random = new Random();
         public const float Deg2Rad = (MathF.PI * 2) / 360;
 
-        public static double Normalize(double val, double valmin, double valmax, double min, double max) 
+        public static double Normalize(double val, double valmin, double valmax, double min, double max)
         {
             return (((val - valmin) / (valmax - valmin)) * (max - min)) + min;
         }

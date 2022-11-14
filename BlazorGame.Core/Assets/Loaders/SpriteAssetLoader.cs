@@ -1,18 +1,14 @@
-using System;
-using System.Drawing;
-using System.IO;
-using System.Net.Http;
-using System.Threading.Tasks;
 using BlazorGame.Core.Interfaces;
 using BlazorGame.Core.Models;
 using Microsoft.AspNetCore.Components;
+using System.Drawing;
 
 namespace BlazorGame.Core.Assets.Loaders
 {
     public class SpriteAssetLoader : IAssetLoader<Sprite>
     {
         private readonly HttpClient _httpClient;
-        
+
         public SpriteAssetLoader(HttpClient httpClient)
         {
             _httpClient = httpClient;
